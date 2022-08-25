@@ -1,0 +1,210 @@
+/*removes all margin and makes scrolling smooth when clicking button*/
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Tahoma;
+}
+
+/*load and format background photo*/
+.backgroundphoto {
+    min-height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(23, 30, 4, 0.7), rgba(0, 0, 0, 0.7)), url(images/Civil-engineers.jpg);
+
+}
+
+/*intro formatting and centering. No position relative needed as the intro is positioned based on the body*/
+.intro {
+    /* outline: red 2px outset; */
+    position: absolute;
+    color: white;
+    top: 50vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: appear 4s 0.5s 1;
+}
+
+/*resizing image to be 60% of intro box width*/
+.img-me {
+    width: 70%;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+}
+
+100% {
+    opacity: 1;
+}
+}
+
+h1 {
+    font-size: 40px;
+}
+
+/* Button formatting-inline block used so that padding margins do not overlay on top of text  */
+.button {
+    display: inline-block;
+    border: 2px white outset;
+    text-decoration: none;
+    margin: 25px;
+    padding: 10px 25px;
+    font-size: 17px;
+    color: white;
+
+}
+
+.button:hover {
+    background-color: red;
+    border: red;
+    transition: 0.75s;
+
+}
+
+/*Experience Page*/
+
+#experience {
+    margin: 100px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* creates flex box container for images*/
+.row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* outline: red 2px outset; */
+}
+
+/* creates individual elements in flexbox container for images*/
+.xpcol {
+    /* outline: red 2px outset; */
+    flex-basis: 32%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+/* each unit takes up 100% of flexbox container elements*/
+.xpcol img {
+    width: 100%;
+    height: 100%;
+    border-radius: 3%;
+}
+
+.layer {
+
+    position: absolute;
+    inset: 0; /* top, bottom, left and right all equal to zero pixels - so layer covers entire xpcol */
+
+}
+
+.layer:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: 0.5s;
+}
+
+.layer h3 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%); /* centres text in x direction */
+    opacity: 0;
+}
+
+.layer:hover h3 {
+    bottom: 45%;
+    transition: 0.5s;
+    opacity: 1;
+}
+
+.contact {
+    margin: auto;
+    text-align: center;
+}
+
+.backgroundimage {
+    min-height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(00, 00, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/backgroundimage.jpg);
+    position: relative;
+}
+
+/* centres the heading in the x direction and provides a 10% offset vertically - this is relative to the backgroundimage class */
+.contact h1 { 
+    color: white;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    
+}
+
+/* centres the form - this is relative to the backgroundimage class */
+.form {
+    position: absolute;
+    color: white;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+/* provides formatting to all items that have input of text */
+input[type='text'] {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    border-bottom: 2px solid white;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/* provides formatting to all textbox */
+#comments {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: tahoma;
+    color: white;
+    border-bottom: 2px solid white;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* submit button formatting */
+
+input[type='submit'] {
+
+    display: inline-block;
+    border: 2px white outset;
+    background: transparent;
+    color: white;
+    text-decoration: none;
+    margin: 25px;
+    padding: 10px 25px;
+    font-size: 17px;
+}
+
+input[type='submit']:hover {
+    transition: 1s;
+    background: red;
+    border: none;
+}
