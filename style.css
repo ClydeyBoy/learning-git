@@ -156,7 +156,7 @@ h1 {
 .form {
     position: absolute;
     color: white;
-    top: 60%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -191,7 +191,7 @@ input[type='text'] {
 
 /* submit button formatting */
 
-input[type='submit'] {
+#submit-btn{
 
     display: inline-block;
     border: 2px white outset;
@@ -201,10 +201,85 @@ input[type='submit'] {
     margin: 25px;
     padding: 10px 25px;
     font-size: 17px;
+    position: absolute;
+    top: 60%;
+    left: 49%;
+    transform: translate(-50%, -50%);
 }
 
-input[type='submit']:hover {
+#submit-btn:hover {
     transition: 1s;
     background: red;
     border: none;
+}
+
+.popUpBox {
+    width: 700px;
+    height: 700px;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background-color: white;
+    border-radius: 5%;
+    opacity: 0;
+   
+    
+
+}
+
+#img-check {
+    width: 20%;
+     /* outline: red 2px outset; */
+
+}
+
+#ty-text {
+    font-size: 35px;
+    font-family: 'Tahoma';
+    /* outline: red 2px outset; */
+   
+}
+
+#submit-text {
+    font-size: 18px;
+    font-family: 'Tahoma';
+}
+
+#popup-okay-btn {
+    display: inline-block;
+    border: 2px black outset;
+    text-decoration: none;
+    margin: 25px;
+    padding: 10px 25px;
+    font-size: 17px;
+    background-color: transparent;
+    z-index: 1;
+    
+    
+    
+}
+
+#popup-okay-btn:hover {
+    background-color: red;
+    border: red;
+    transition: 0.75s;
+    color: white;
+    
+
+}
+
+.popUpBox-contents {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+}
+
+.active {
+    opacity: 1;
+    z-index: 1;
+    transition: 0.75s;
 }

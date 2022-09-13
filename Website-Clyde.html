@@ -5,6 +5,7 @@
     <title>Clyde D'Souza CV</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -75,23 +76,39 @@
 
     <!-- Contact Page -->
     <section class="contact">
+
         <div class="backgroundimage">
             <h1> Contact</h1>
-            <div>
-                
-            </div>
 
             <form class="form">
-                <input type="text" name="name" id="name" placeholder="Your Name"> 
+                <input type="text" name="name" id="name" placeholder="Your Name">
                 <br>
                 <input type="text" name="email" id="email" placeholder="Your Email">
                 <br>
                 <input type="text" name="subject" id="subject" placeholder="Subject">
                 <br>
-                <textarea name="comments" id="comments" cols="50" rows="10" placeholder="Please type your message here."></textarea>
+                <textarea name="comments" id="comments" cols="50" rows="10"
+                    placeholder="Please type your message here."></textarea>
                 <br>
-                <input type="submit">
+                
             </form>
+
+            <button id="submit-btn">Submit</button>
+           
+
+            <div class="popUpBox">
+                <div class="popUpBox-contents">
+                    <img id="img-check" src="images/checkmark.png">
+                    <p id='ty-text'><b>Thank you</b></p>
+                    <p id='submit-text'>Your details have been submitted</p>
+                    <button id="popup-okay-btn">Ok</button>
+                </div>
+
+            </div>
+
+            <div>
+
+            </div>
 
         </div>
 
